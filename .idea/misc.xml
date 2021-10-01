@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/MathMe/app/src/main/res/drawable/shape_button.xml" value="0.12239583333333333" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/MathMe/app/src/main/res/layout/activity_easy_level.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/MathMe/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/MathMe/app/src/main/res/layout/activity_levels.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/MathMe/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/MathMe/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/MathMe/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/app/src/main/res/drawable/shape_button.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/app/src/main/res/layout/activity_easy_level.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/app/src/main/res/layout/activity_home.xml" value="0.1796875" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/app/src/main/res/layout/activity_levels.xml" value="0.1796875" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Romi/Documents/Studies/Third_year/Summer/Android/Final_Project/app/src/main/res/layout/activity_register.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

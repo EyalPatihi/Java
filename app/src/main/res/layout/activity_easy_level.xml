@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A1E1F1"
+    tools:context=".EasyLevel">
+
+    <!--ImageView used for showing pictures along with questions-->
+
+    <!--TextView used for showing questions on screen-->
+
+    <!--Using another LinearLayout for showing buttons
+        in horizontal orientation-->
+
+    <TextView
+        android:id="@+id/quesTextView"
+        android:layout_width="409dp"
+        android:layout_height="89dp"
+        android:fontFamily="@font/destroy"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:layout_width="273dp"
+        android:layout_height="114dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606"
+        tools:ignore="MissingConstraints">
+
+        <!--TrueButton-->
+        <Button
+            android:id="@+id/trueBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="116dp"
+            android:layout_height="114dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#4FBC17"
+            android:fontFamily="@font/destroy"
+            android:text="@string/trueBtn"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!--FalseButton-->
+        <Button
+            android:id="@+id/falseBtn"
+            android:layout_width="113dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#E33328"
+            android:fontFamily="@font/destroy"
+            android:text="@string/falseBtn"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="89dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/destroy"
+        android:text="@string/score"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/scoreEditText"
+        android:layout_width="60dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/destroy"
+        android:text="0"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
