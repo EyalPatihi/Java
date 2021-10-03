@@ -1,5 +1,6 @@
 package com.example.mathme;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,15 +13,15 @@ import java.util.Random;
 
 public class EasyLevel extends AppCompatActivity implements View.OnClickListener {
 
+    public Question currentQues;
     private Button falseButton;
     private Button trueButton;
-    private int correct = 0;
+    private String sum;
     private int score = 0;
-    private int currentQuestionIndex = 0;
     private TextView question;
     private TextView scoreText;
     Random rand = new Random();
-    private Question[] questionBank = new Question[] {
+    private final Question[] questionBank = new Question[] {
             // Array of objects of class Question
             // providing questions from string
             // resource and the correct answer
@@ -30,6 +31,7 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
             new Question(R.string.question4, false),
             new Question(R.string.question5, true),
             new Question(R.string.question6, false),
+
 
     };
 
@@ -45,9 +47,13 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
         falseButton = findViewById(R.id.falseBtn);
         falseButton.setOnClickListener(this);
 
-        scoreText = findViewById(R.id.scoreEditText);
+        scoreText = findViewById(R.id.updatedScore);
+        sum = scoreText.getText().toString();
+        score = Integer.parseInt(sum); //converts string to int
 
         question = findViewById(R.id.quesTextView);
+        currentQues = (Question) questionBank[1];
+        //question.setText((CharSequence) currentQues);
         question.setText(R.string.question2);
     }
 
@@ -60,21 +66,20 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
             checkAnswer(false);
     }
 
-    private void checkAnswer(boolean userChooseCorrect) {
-        boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
+    private void checkAnswer(boolean userChoose) {
+        //boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         // Getting correct answer of current question
         int toastMessageId;
         // If answer matches with the clicked button
 
-        if (userChooseCorrect == answerIsTrue) {
-            correct++;
-            score = correct * 5;
-            scoreText.setText(score);
+        if (userChoose == currentQues.answerTrue) {
+            score += 5;
+            sum = new Integer(score).toString(); //converts int to string
+            scoreText.setText(sum);
             toastMessageId = R.string.correct_answer;
             //RandQuestion();
         }
         else {
-            // Showing toast: message correct
             toastMessageId = R.string.wrong_answer;
             //RandQuestion();
         }
@@ -82,9 +87,11 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
         Toast.makeText(this, toastMessageId, Toast.LENGTH_SHORT).show();
     }
 
-    /*@SuppressLint("SetTextI18n")
-    private void RandQuestion(){
+    private void generateQuestion(){
         //int randQuesNum = rand.nextInt(5);
-        question.setText(R.string.question1);
-    }*/
+        Question randQues = questionBank[rand.nextInt(questionBank.length)];
+        //question.setText(R.string.question1);
+        String ba = randQues.toString();
+        question.setText(ba);
+    }
 }
