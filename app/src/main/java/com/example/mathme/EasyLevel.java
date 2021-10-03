@@ -91,7 +91,7 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
         //int randQuesNum = rand.nextInt(5);
         Question randQues = questionBank[rand.nextInt(questionBank.length)];
         //question.setText(R.string.question1);
-        String ba = randQues.toString();
-        question.setText(ba);
+        String str = randQues.toString();
+        question.setText(str);
     }
 }
