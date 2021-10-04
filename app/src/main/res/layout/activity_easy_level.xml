@@ -83,7 +83,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/scoreEditText"
+        android:id="@+id/updatedScore"
         android:layout_width="60dp"
         android:layout_height="29dp"
         android:fontFamily="@font/destroy"

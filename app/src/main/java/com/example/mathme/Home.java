@@ -1,5 +1,7 @@
 package com.example.mathme;
+
 import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -7,25 +9,24 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-    private TextView InstructionsTextView;
-    MediaPlayer song;
-    int count;
-    int i=0;// בשביל השיר- להפעיל או לכבות
 
+    ImageButton speaker;
+    MediaPlayer song;
+    boolean play = true;
     Button diffiLevels;
 
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        //InstructionsTextView=(TextView)findViewById(R.id.textView3);
         song= MediaPlayer.create(Home.this, R.raw.clas);
-        song.start();
-        count=0;
 
         diffiLevels = findViewById(R.id.diffiLevelBtn);
         diffiLevels.setOnClickListener(new View.OnClickListener() {
@@ -35,16 +36,25 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        speaker = findViewById(R.id.speakerBtn);
+        PlayIt();
+        speaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(play)
+                    StopIt();
+                else
+                    PlayIt();
+            }
+        });
+
     }
     public void Instructions (View view)
     {
         AlertDialog alertDialog = new AlertDialog.Builder(Home.this).create(); //הוראות הפעלה. ברגע שלוחצים על כפתור אינסטרקשיין אז זה נכנס למתודה הזאת.
-        alertDialog.setTitle("הוראות הפעלה                               ");
-        alertDialog.setMessage("הוראות הפעלה:\n" +
-                "משחק לימודי מתמטי. \n" +
-                "המשחק מחולק לפי דרגות קושי- קל, בינוני וקשה.\n" +
-                "בכל משחק יש 5 שאלות, שעליהן צריך לענות כמה שיותר מהר. \n" +
-                "תוצאות המשחקים יישמרו בטבלת השיאים ותוכל\\י לצפות בהן בסיום המשחק.\n");
+        alertDialog.setTitle(R.string.Instructions);
+        //alertDialog.setMessage(R.string.InstructionsText);
         //alertDialog.setIcon(R.drawable.welcome);
         //alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener())
         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok", new DialogInterface.OnClickListener() {
@@ -64,29 +74,16 @@ public class Home extends AppCompatActivity {
         // InstructionsTextView.setText(Integer.toString(4));
         //  InstructionsTextView.setText("מ"תוצאות המשחקים יישמרו בטבלת השיאים ותוכל\\י לצפות בהן בסיום המשחק.\n");
     }
-    public void PlayIt (View view)
-    {
-        if (count == 1) {
 
-            song = MediaPlayer.create(Home.this, R.raw.clas);
-            song.start();
-            i=0;
-        }
-
-        //song.stop();
-        //}
-        if (count == 0 && i==0)
-        {
-            count = 1;
-            //song.start();
-            song.stop();
-        }
-        //count = 1;
-        //i=0;
+    public void PlayIt () {
+        song.start();
+        speaker.setBackgroundResource(R.drawable.speaker_on);
+        play = true;
     }
 
-    public void StopIt (View view)
-    {
-        song.stop();
+    public void StopIt ()  {
+        song.pause();
+        speaker.setBackgroundResource(R.drawable.speaker_off);
+        play = false;
     }
 }

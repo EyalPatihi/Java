@@ -6,7 +6,7 @@ public class Question
     private int answerResId;
 
     // answerTrue will store correct answer of the question provided
-    private boolean answerTrue;
+    public boolean answerTrue;
 
     public Question(int answerResId, boolean answerTrue)    {
         // Setting the values through arguments passed in constructor

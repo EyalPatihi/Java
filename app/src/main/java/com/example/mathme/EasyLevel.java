@@ -54,7 +54,7 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
         question = findViewById(R.id.quesTextView);
         currentQues = (Question) questionBank[1];
         //question.setText((CharSequence) currentQues);
-        question.setText(R.string.question2);
+        question.setText(R.string.question3);
     }
 
     @Override
@@ -70,8 +70,8 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
         //boolean answerIsTrue = questionBank[currentQuestionIndex].isAnswerTrue();
         // Getting correct answer of current question
         int toastMessageId;
-        // If answer matches with the clicked button
 
+        // If answer matches with the clicked button
         if (userChoose == currentQues.answerTrue) {
             score += 5;
             sum = new Integer(score).toString(); //converts int to string

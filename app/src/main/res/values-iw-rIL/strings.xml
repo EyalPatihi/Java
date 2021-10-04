@@ -36,4 +36,8 @@
     <string name="Password">סיסמה</string>
     <string name="Login">התחברות</string>
     <string name="Register">הרשמה</string>
+    <string name="InstructionsText">משחק לימודי מתמטי.
+                "המשחק מחולק לפי דרגות קושי- קל, בינוני וקשה.
+                "בכל משחק יש 5 שאלות, שעליהן צריך לענות.
+                "תוצאות המשחקים יישמרו בטבלת השיאים ותוכל\י לצפות בהן בסיום המשחק.</string>
 </resources>

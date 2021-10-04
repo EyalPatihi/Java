@@ -90,9 +90,6 @@ public class LoginActivity extends AppCompatActivity {
                 {
                     Toast.makeText(LoginActivity.this,"Error,goddamm!",Toast.LENGTH_SHORT).show();
                 }
-
-
-
             }
         });
         tvSignUp.setOnClickListener(new View.OnClickListener() {
