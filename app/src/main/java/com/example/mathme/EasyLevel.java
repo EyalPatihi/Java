@@ -18,7 +18,7 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
     private Button trueButton;
     private String sum;
     private int score = 0;
-    private TextView question;
+    private TextView questionText;
     private TextView scoreText;
     Random rand = new Random();
     private final Question[] questionBank = new Question[] {
@@ -39,7 +39,7 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_level);
-        //RandQuestion();
+        //generateQuestion();
 
         trueButton = findViewById(R.id.trueBtn);
         trueButton.setOnClickListener(this);
@@ -51,10 +51,10 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
         sum = scoreText.getText().toString();
         score = Integer.parseInt(sum); //converts string to int
 
-        question = findViewById(R.id.quesTextView);
+        questionText = findViewById(R.id.quesTextView);
         currentQues = (Question) questionBank[1];
         //question.setText((CharSequence) currentQues);
-        question.setText(R.string.question3);
+        questionText.setText(R.string.question3);
     }
 
     @Override
@@ -77,11 +77,11 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
             sum = new Integer(score).toString(); //converts int to string
             scoreText.setText(sum);
             toastMessageId = R.string.correct_answer;
-            //RandQuestion();
+            //generateQuestion();
         }
         else {
             toastMessageId = R.string.wrong_answer;
-            //RandQuestion();
+            //generateQuestion();
         }
 
         Toast.makeText(this, toastMessageId, Toast.LENGTH_SHORT).show();
@@ -90,8 +90,12 @@ public class EasyLevel extends AppCompatActivity implements View.OnClickListener
     private void generateQuestion(){
         //int randQuesNum = rand.nextInt(5);
         Question randQues = questionBank[rand.nextInt(questionBank.length)];
+        int ques = randQues.question;
         //question.setText(R.string.question1);
-        String str = randQues.toString();
-        question.setText(str);
+        String str = new Integer(ques).toString();
+        questionText.setText(str);
     }
 }
+//sum = scoreText.getText().toString();
+//score = Integer.parseInt(sum); //converts string to int
+//scoreText.setText();

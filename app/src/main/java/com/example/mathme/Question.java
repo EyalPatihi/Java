@@ -3,25 +3,25 @@ package com.example.mathme;
 public class Question
 {
     // answerResId will store question
-    private int answerResId;
+    int question;
 
     // answerTrue will store correct answer of the question provided
-    public boolean answerTrue;
+    boolean answerTrue;
 
-    public Question(int answerResId, boolean answerTrue)    {
+    public Question(int question, boolean answerTrue)    {
         // Setting the values through arguments passed in constructor
-        this.answerResId = answerResId;
+        this.question = question;
         this.answerTrue = answerTrue;
     }
 
     // Returning the question passed
-    public int getAnswerResId() {
-        return answerResId;
+    public int getQuestion() {
+        return question;
     }
 
     // Setting the question passed
-    public void setAnswerResId(int answerResId) {
-        this.answerResId = answerResId;
+    public void setQuestion(int question) {
+        this.question = question;
     }
 
     // Returning the correct answer of question

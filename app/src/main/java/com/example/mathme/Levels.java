@@ -41,7 +41,7 @@ public class Levels extends AppCompatActivity implements View.OnClickListener {
         if(easyLevel == view){
             Intent intent = new Intent(this, EasyLevel.class);
             startActivity(intent);
-            }
+        }
         if(normalLevel == view){
             Intent intent = new Intent(this, NormalLevel.class);
             startActivity(intent);

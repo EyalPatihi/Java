@@ -14,7 +14,6 @@
         android:layout_height="48dp"
         android:fontFamily="@font/destroy"
         android:onClick="Instructions"
-        android:shadowColor="#6A4343"
         android:text="@string/Instructions"
         android:textColor="?android:attr/colorBackground"
         android:textSize="18sp"

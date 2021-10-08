@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button signIn;
     private Button signUp;
 
-    // For localization
+    //For localization
     private ActionBar actionBar;
     private ImageButton chngLan;
 

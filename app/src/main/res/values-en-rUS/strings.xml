@@ -37,4 +37,5 @@
     <string name="Login">Login</string>
     <string name="Register">Register</string>
     <string name="InstructionsText">This is a math game. In this game we have three difficulties: easy, middle and hard. In every category there are 5 questions you need to answer. The results  will be saved in the records table, you can watch it at gameover.</string>
+    <string name="Check">Check</string>
 </resources>
